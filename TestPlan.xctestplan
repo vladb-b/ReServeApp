@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "2BD7562D-AEF1-4049-8B6F-85631104423C",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ReServeApp.xcodeproj",
+        "identifier" : "F585D0B42F3FD13900688422",
+        "name" : "ReServeAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

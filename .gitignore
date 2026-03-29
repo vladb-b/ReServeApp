@@ -1,0 +1,5 @@
+.DS_Store
+output/
+tmp/
+ReServeApp.xcodeproj/project.xcworkspace/xcuserdata/
+ReServeApp.xcodeproj/xcuserdata/
