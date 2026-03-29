@@ -31,11 +31,6 @@ private struct WatchDashboardView: View {
                             WatchEmptyCard(compact: compact)
                         }
 
-                        NavigationLink(value: WatchRoute.search) {
-                            WatchSearchPromptCard(compact: compact)
-                        }
-                        .buttonStyle(.plain)
-
                         WatchSectionTitle(title: "Nearby Courts")
 
                         ForEach(bookingManager.courts) { court in
@@ -53,8 +48,6 @@ private struct WatchDashboardView: View {
             .watchNavigationBackground()
             .navigationDestination(for: WatchRoute.self) { route in
                 switch route {
-                case .search:
-                    WatchCourtSearchView()
                 case .court(let court):
                     WatchCourtDetailView(court: court, path: $path)
                 }
@@ -119,83 +112,6 @@ private struct WatchDashboardView: View {
             }
             .frame(width: compact ? 36 : 42, height: compact ? 36 : 42)
             .clipShape(Circle())
-        }
-    }
-}
-
-private struct WatchCourtSearchView: View {
-    @EnvironmentObject private var bookingManager: BookingManager
-    @State private var searchText = ""
-
-    private var filteredCourts: [Court] {
-        if searchText.isEmpty {
-            return bookingManager.courts
-        }
-
-        return bookingManager.courts.filter {
-            $0.name.localizedCaseInsensitiveContains(searchText) ||
-            $0.location.localizedCaseInsensitiveContains(searchText)
-        }
-    }
-
-    var body: some View {
-        GeometryReader { proxy in
-            let compact = proxy.size.width < 180
-
-            ScrollView {
-                VStack(alignment: .leading, spacing: compact ? 6 : ReserveDesign.Watch.itemSpacing) {
-                    ForEach(filteredCourts) { court in
-                        NavigationLink(value: WatchRoute.court(court)) {
-                            WatchCourtCard(court: court, compact: compact)
-                        }
-                        .buttonStyle(.plain)
-                    }
-
-                    if filteredCourts.isEmpty {
-                        WatchDarkCard(cornerRadius: ReserveDesign.Watch.fieldRadius) {
-                            Text("No courts match that search.")
-                                .font(.footnote.weight(.medium))
-                                .foregroundStyle(ReserveDesign.mutedText)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                        }
-                    }
-                }
-                .padding(.horizontal, compact ? 8 : ReserveDesign.Watch.screenPadding)
-                .padding(.vertical, compact ? 6 : ReserveDesign.Watch.itemSpacing)
-            }
-            .focusable(true)
-        }
-        .navigationTitle("Search")
-        .searchable(text: $searchText, prompt: "Search courts")
-        .watchNavigationBackground()
-    }
-}
-
-private struct WatchSearchPromptCard: View {
-    var compact = false
-
-    var body: some View {
-        WatchDarkCard(
-            cornerRadius: ReserveDesign.Watch.fieldRadius,
-            padding: EdgeInsets(top: compact ? 10 : 10, leading: compact ? 10 : 12, bottom: compact ? 10 : 10, trailing: compact ? 10 : 12)
-        ) {
-            HStack(spacing: 8) {
-                Image(systemName: "magnifyingglass")
-                    .font(.system(size: compact ? 11 : 12, weight: .medium))
-                    .foregroundStyle(ReserveDesign.secondaryText)
-
-                Text("Search courts")
-                    .font(.system(size: compact ? 13 : 14))
-                    .foregroundStyle(ReserveDesign.secondaryText)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.85)
-
-                Spacer(minLength: 4)
-
-                Image(systemName: "chevron.right")
-                    .font(.system(size: compact ? 10 : 11, weight: .semibold))
-                    .foregroundStyle(ReserveDesign.mutedText)
-            }
         }
     }
 }
@@ -528,7 +444,6 @@ private struct WatchCourtDetailView: View {
 }
 
 private enum WatchRoute: Hashable {
-    case search
     case court(Court)
 }
 
