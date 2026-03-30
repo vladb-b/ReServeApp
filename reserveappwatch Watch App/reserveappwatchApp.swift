@@ -17,7 +17,7 @@ struct reserveappwatch_Watch_AppApp: App {
             ContentView()
                 .environmentObject(bookingManager)
         }
-        .onChange(of: scenePhase) { _, newPhase in
+        .onChange(of: scenePhase) { newPhase in
             if newPhase == .active {
                 bookingManager.refreshSync()
             }

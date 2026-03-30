@@ -803,7 +803,7 @@ private struct WatchWhiteCard<Content: View>: View {
 
 private extension View {
     func watchNavigationBackground() -> some View {
-        containerBackground(ReserveDesign.Watch.backgroundGradient, for: .navigation)
+        background(ReserveDesign.Watch.backgroundGradient.ignoresSafeArea())
     }
 }
 
