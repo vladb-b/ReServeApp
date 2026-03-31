@@ -21,19 +21,10 @@
 		F5184AA22F3AE93F00B28CBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5184A972F3AE93F00B28CBF /* ContentView.swift */; };
 		F5184AA32F3AE93F00B28CBF /* ReserveSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500198D2F705EAF006F5FC0 /* ReserveSyncCoordinator.swift */; };
 		F5184AA42F3AE93F00B28CBF /* ReserveDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = F500198E2F705EB0006F5FC0 /* ReserveDesign.swift */; };
-		F585D0C12F3FD46D00688422 /* TESTING.md in Resources */ = {isa = PBXBuildFile; fileRef = F585D0C02F3FD46D00688422 /* TESTING.md */; };
-		F592B78F2F3FE87300A81EDD /* TestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = F592B78E2F3FE87300A81EDD /* TestPlan.xctestplan */; };
 		F592B7912F3FEBD500A81EDD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F592B7902F3FEBD500A81EDD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F585D0BB2F3FD13900688422 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5184A632F3AE84D00B28CBF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5184A6A2F3AE84D00B28CBF;
-			remoteInfo = ReServeApp;
-		};
 		F5DA1F1F2F7522780019CEA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5184A632F3AE84D00B28CBF /* Project object */;
@@ -69,9 +60,6 @@
 		F5184A992F3AE93F00B28CBF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F5184A9A2F3AE93F00B28CBF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F5184A9B2F3AE93F00B28CBF /* ReServeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReServeApp.swift; sourceTree = "<group>"; };
-		F585D0B52F3FD13900688422 /* ReServeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReServeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F585D0C02F3FD46D00688422 /* TESTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TESTING.md; sourceTree = "<group>"; };
-		F592B78E2F3FE87300A81EDD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		F592B7902F3FEBD500A81EDD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,11 +72,6 @@
 		F5184A6D2F3AE84D00B28CBF /* ReServeApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ReServeApp;
-			sourceTree = "<group>";
-		};
-		F585D0B62F3FD13900688422 /* ReServeAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ReServeAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -108,22 +91,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F585D0B22F3FD13900688422 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F5184A622F3AE84D00B28CBF = {
 			isa = PBXGroup;
 			children = (
-				F592B78E2F3FE87300A81EDD /* TestPlan.xctestplan */,
 				F5184A6D2F3AE84D00B28CBF /* ReServeApp */,
-				F585D0B62F3FD13900688422 /* ReServeAppUITests */,
 				F50019622F705EA8006F5FC0 /* reserveappwatch Watch App */,
 				F5184A6C2F3AE84D00B28CBF /* Products */,
 				F5184A952F3AE93F00B28CBF /* BookingConfirmationView.swift */,
@@ -135,7 +109,6 @@
 				F500198D2F705EAF006F5FC0 /* ReserveSyncCoordinator.swift */,
 				F500198E2F705EB0006F5FC0 /* ReserveDesign.swift */,
 				F5184A9B2F3AE93F00B28CBF /* ReServeApp.swift */,
-				F585D0C02F3FD46D00688422 /* TESTING.md */,
 				F592B7902F3FEBD500A81EDD /* README.md */,
 			);
 			sourceTree = "<group>";
@@ -144,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				F5184A6B2F3AE84D00B28CBF /* ReServeApp.app */,
-				F585D0B52F3FD13900688422 /* ReServeAppUITests.xctest */,
 				F500195E2F705EA8006F5FC0 /* reserveappwatch Watch App.app */,
 			);
 			name = Products;
@@ -199,29 +171,6 @@
 			productReference = F5184A6B2F3AE84D00B28CBF /* ReServeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F585D0B42F3FD13900688422 /* ReServeAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F585D0BD2F3FD13900688422 /* Build configuration list for PBXNativeTarget "ReServeAppUITests" */;
-			buildPhases = (
-				F585D0B12F3FD13900688422 /* Sources */,
-				F585D0B22F3FD13900688422 /* Frameworks */,
-				F585D0B32F3FD13900688422 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F585D0BC2F3FD13900688422 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F585D0B62F3FD13900688422 /* ReServeAppUITests */,
-			);
-			name = ReServeAppUITests;
-			packageProductDependencies = (
-			);
-			productName = ReServeAppUITests;
-			productReference = F585D0B52F3FD13900688422 /* ReServeAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				F5184A6A2F3AE84D00B28CBF /* ReServeApp */,
-				F585D0B42F3FD13900688422 /* ReServeAppUITests */,
 				F500195D2F705EA8006F5FC0 /* reserveappwatch Watch App */,
 			);
 		};
@@ -277,9 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F585D0C12F3FD46D00688422 /* TESTING.md in Resources */,
 				F592B7912F3FEBD500A81EDD /* README.md in Resources */,
-				F592B78F2F3FE87300A81EDD /* TestPlan.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,13 +266,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F585D0B12F3FD13900688422 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -334,11 +273,6 @@
 			isa = PBXTargetDependency;
 			target = F500195D2F705EA8006F5FC0 /* reserveappwatch Watch App */;
 			targetProxy = F5DA1F1F2F7522780019CEA6 /* PBXContainerItemProxy */;
-		};
-		F585D0BC2F3FD13900688422 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5184A6A2F3AE84D00B28CBF /* ReServeApp */;
-			targetProxy = F585D0BB2F3FD13900688422 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -618,49 +552,6 @@
 			};
 			name = Release;
 		};
-		F585D0BE2F3FD13900688422 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vlad.ReServeAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ReServeApp;
-			};
-			name = Debug;
-		};
-		F585D0BF2F3FD13900688422 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vlad.ReServeAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ReServeApp;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -687,15 +578,6 @@
 			buildConfigurations = (
 				F5184A8D2F3AE85000B28CBF /* Debug */,
 				F5184A8E2F3AE85000B28CBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F585D0BD2F3FD13900688422 /* Build configuration list for PBXNativeTarget "ReServeAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F585D0BE2F3FD13900688422 /* Debug */,
-				F585D0BF2F3FD13900688422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
