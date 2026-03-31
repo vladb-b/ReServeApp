@@ -95,21 +95,9 @@ private struct WatchDashboardView: View {
 
             Spacer()
 
-            ReserveRemoteImage(url: ReserveDesign.profileImageURL) {
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [ReserveDesign.bookingGreen, ReserveDesign.surface],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .overlay(
-                        Image(systemName: "person.fill")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundStyle(.white.opacity(0.85))
-                    )
-            }
+            Image(ReserveDesign.profileImageAssetName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
             .frame(width: compact ? 36 : 42, height: compact ? 36 : 42)
             .clipShape(Circle())
         }
@@ -413,10 +401,9 @@ private struct WatchCourtDetailView: View {
     }
 
     private func heroImage(compact: Bool) -> some View {
-        ReserveRemoteImage(url: ReserveDesign.courtHeroURL) {
-            Rectangle()
-                .fill(ReserveDesign.Watch.detailHeroGradient)
-        }
+        Image(ReserveDesign.courtHeroAssetName)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
         .frame(maxWidth: .infinity)
         .frame(height: compact ? 80 : 92)
         .clipShape(

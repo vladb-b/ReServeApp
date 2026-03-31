@@ -51,14 +51,9 @@ struct HomeView: View {
 
             Spacer()
 
-            ReserveRemoteImage(url: ReserveDesign.profileImageURL) {
-                Circle()
-                    .fill(ReserveDesign.bookingGreen)
-                    .overlay(
-                        Image(systemName: "person.fill")
-                            .foregroundColor(.white)
-                    )
-            }
+            Image(ReserveDesign.profileImageAssetName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
             .frame(width: 76, height: 76)
             .clipShape(Circle())
         }

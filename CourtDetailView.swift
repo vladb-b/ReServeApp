@@ -78,10 +78,9 @@ struct CourtDetailView: View {
 
     private var heroImage: some View {
         ZStack(alignment: .topLeading) {
-            ReserveRemoteImage(url: ReserveDesign.courtHeroURL) {
-                Rectangle()
-                    .fill(LinearGradient(colors: [.orange, .brown], startPoint: .topLeading, endPoint: .bottomTrailing))
-            }
+            Image(ReserveDesign.courtHeroAssetName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
             .frame(height: 160)
             .clipped()
 

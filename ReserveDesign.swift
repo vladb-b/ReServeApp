@@ -14,8 +14,8 @@ enum ReserveDesign {
     static let total = Color(red: 0.557, green: 0.231, blue: 0.2)
     static let star = Color(red: 0.969, green: 0.769, blue: 0.247)
 
-    static let profileImageURL = URL(string: "https://www.figma.com/api/mcp/asset/a444c7ee-0449-4b5b-8ab8-f2e9682f9a66")
-    static let courtHeroURL = URL(string: "https://www.figma.com/api/mcp/asset/0a40de9c-618d-4820-bc77-fcd0c6558fe5")
+    static let profileImageAssetName = "ProfilePhoto"
+    static let courtHeroAssetName = "CourtHero"
 }
 
 struct ReserveRemoteImage<Placeholder: View>: View {
