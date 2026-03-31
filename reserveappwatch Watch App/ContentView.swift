@@ -799,7 +799,7 @@ private func watchFormattedTime(_ time: String) -> String {
     formatter.dateFormat = "HH:mm"
 
     let output = DateFormatter()
-    output.dateFormat = "h:mm a"
+    output.dateFormat = "HH:mm"
 
     guard let date = formatter.date(from: time) else {
         return time
