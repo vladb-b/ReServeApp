@@ -7,7 +7,9 @@ ReServeApp grew out of a real tennis booking experience and the idea that reserv
 
 Live prototype: [reserve.figma.site](https://reserve.figma.site/)
 
-The current project focuses on a polished court-booking flow on iPhone, plus a compact watch companion that mirrors the next booking and booking confirmation state.
+## Why this matters
+
+Booking a court should feel quick clear and connected across devices. ReServe explores that idea through a focused iPhone flow and a lightweight Apple Watch companion that keeps the next booking close at hand.
 
 ## What is in the repo
 
@@ -38,8 +40,3 @@ The current project focuses on a polished court-booking flow on iPhone, plus a c
 2. Run the `ReServeApp` scheme on an iPhone simulator
 3. Run the `reserveappwatch Watch App` scheme on a paired watch simulator
 
-## Notes
-
-- The watch experience is intentionally simplified for demo use
-- Search currently lives on iPhone; watch stays focused on mirrored booking state
-- Placeholder icons are included and can be replaced later with final brand assets
